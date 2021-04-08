@@ -1,5 +1,9 @@
+let counter = 1;
+
 const productCards = (products) => {
-	return products.forEach((product) => {
+	const cardList = document.querySelector('#card-list');
+	cardList.innerHTML = '';
+	products.products.forEach((product) => {
 		//creates DOM elements
 		const cardList = document.querySelector('#card-list');
 		const sectionCard = document.createElement('section');
@@ -13,8 +17,9 @@ const productCards = (products) => {
 
 		//defines the elements properties
 		sectionCard.classList.add('prod-card');
-		productImg.src = product.image;
 		productImg.classList.add('prod-img');
+		productImg.src = product.image;
+		productName.classList.add('prod-name');
 		productName.innerText = product.name;
 		productDesc.classList.add('prod-desc');
 		productDesc.innerText = product.description;
@@ -36,22 +41,35 @@ const productCards = (products) => {
 		sectionCard.appendChild(price);
 		sectionCard.appendChild(installments);
 		sectionCard.appendChild(purchaseButton);
-	})
-}
 
-const getApi = async () => {
+
+	})
+	const nextPageButton = document.createElement('button');
+
+	nextPageButton.classList.add('next-btn');
+	nextPageButton.innerText = 'Ainda mais produtos aqui!';
+
+	cardList.appendChild(nextPageButton);
+	const nextPage = `${products.nextPage}`;
+	nextPageButton.addEventListener('click', () => {
+		counter +=1;
+		getApi(`https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=${counter}`)
+	});
+};
+
+const getApi = async (apiURL) => {
 	try {
-		const endPoint = await fetch('https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1');
+		const endPoint = await fetch(apiURL);
 		const promise = await endPoint.json();
-		const products = promise.products;
-		productCards(products);
+		const getProducts = promise;
+		productCards(getProducts);
 	} catch (error) {
 		return console.log(error);
 	}
 };
 
 
-window.onload = function onload() {
-	getApi();
-};
+
+	getApi('https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1');
+
 

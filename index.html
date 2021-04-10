@@ -17,10 +17,10 @@
       </p>
       <nav>
         <ul>
-          <li>Conheça a Linx</li>
-          <li>Ajude o algorítimo</li>
-          <li>Seus produtos</li>
-          <li>Compartilhe</li>
+          <li><a href="#">Conheça a Linx</a></li>
+          <li><a href="#">Ajude o algorítimo</a></li>
+          <li><a href="#">Seus produtos</a></li>
+          <li><a href="#">Compartilhe</a></li>
         </ul>
       </nav>
     </header>
@@ -37,7 +37,9 @@
             lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad
             litora torquent per conubia nostra, per inceptos himenaeos.
             Vestibulum vel urna tortor. Vivamus et arcu non felis tristique
-            eleifend. Morbi eu condimentum urna. Curabitur eu magna eget turpis
+            eleifend.<br />
+            <br />
+            Morbi eu condimentum urna. Curabitur eu magna eget turpis
             condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar
             purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra.
             Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla
@@ -70,9 +72,29 @@
       <section id="card-list" class="card-list"></section>
       <section class="newsletter">
         <h2><span>Compartilhe a novidade</span></h2>
+
+        <p>
+          Quer que seus amigos também ganhem a lista personalizada deles?
+          Preencha agora!
+        </p>
+        <form action="#">
+          <label for="friend">Nome do seu amigo:</label>
+          <input type="text" name="friend" id="friend-name" class="form-news" />
+
+          <label for="friend-mail">E-mail</label>
+          <input type="email" name="fMail" id="friend-mail" class="form-news" />
+          <br /><br /><br />
+          <input type="submit" id="news-btn" value="Enviar agora" />
+        </form>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <p>
+        Testando suas habilidades em HTML, CSS e JS. <br />
+        Linx Impulse <br />
+        2019
+      </p>
+    </footer>
 
     <script src="./assets/Scripts/index.js"></script>
   </body>

@@ -1,21 +1,38 @@
+:root {
+  --main-color: #707070;
+  --secondary-color: #888888;
+  --third-color: #00000029;
+  --basic: #FFFFFF;
+}
+
+body {
+  margin: 0 auto;
+
+}
 header {
+  background-color: var(--main-color);
   font-family: "Helvetica", sans-serif;
-  height: fit-content;
-  left: 0px;
+  height: 24.939rem;
+  left: 0;
+  padding-top: 2px;
   text-align: center;
-  top: 0px;
-  width: 100%;
+  top: 0;
+  margin-bottom: 0.625rem;
+
 }
 
 .head-1 {
+  color: var(--basic);
   font-size: 20px;
 }
 
 .head-2 {
+  color: var(--basic);
   font-size: 40px;
 }
 
 .head-3 {
+  color: var(--basic);
   font-size: 14px;
 }
 
@@ -25,6 +42,7 @@ nav ul {
   justify-content: space-around;
   width: 769px;
   margin: 0 auto;
+  margin-top: 3.125rem;
 }
 
 nav ul li {
@@ -33,8 +51,6 @@ nav ul li {
   background-color: #fff;
   border: #707070 solid 1px;
   border-radius: 4px;
-
-
 }
 
 nav ul li a {
@@ -45,6 +61,12 @@ nav ul li a {
 }
 
 .section-1 {
+  display: grid;
+  grid-column-gap: 3.75rem;
+  grid-template-columns: 32.5rem 21.25rem;
+  justify-content: center;
+  margin: 0 auto;
+  width: 57.5rem;
   /*display: flex;
   flex-direction: row;
   justify-content: center ;
@@ -52,15 +74,10 @@ nav ul li a {
   width: auto;
   margin: 0 auto ;*/
 
-  display: grid;
-  grid-template-columns: 32.5rem 21.25rem;
-  grid-column-gap: 60px;
-  justify-content: center;
-  width: 57.5rem;
-  margin: 0 auto;
 }
 
 .section-1 article {
+  color: var(--secondary-color);
   width: 32.5rem;
 }
 .section-1 h3 {
@@ -98,11 +115,13 @@ input[type="submit"] {
 }
 
 .section-1 form label {
+  color: var(--secondary-color);
   font-family: "Helvetica", sans-serif;
   padding: 10px;
 }
 .card-list {
   align-items: center;
+  color: var(--secondary-color);
   display: grid;
   grid-gap: 30px;
   grid-template-columns: 12.5rem 12.5rem 12.5rem 12.5rem;
@@ -120,6 +139,7 @@ input[type="submit"] {
 
 .prod-desc {
   font: 12px "Helvetica", sans-serif;
+  width: 200px;
 }
 
 .old-price {

@@ -51,18 +51,24 @@
 
         <form action="#">
           <label for="name">Seu nome</label>
-          <input type="text" name="name" id="name" class="input-1" />
+          <input type="text" name="name" id="name" class="input-1" required />
 
           <label for="">Email</label>
-          <input type="email" name="mail" id="mail" class="input-1" />
+          <input type="email" name="mail" id="mail" class="input-1" required />
 
           <label for="cpf">CPF</label>
-          <input type="text" name="cpf" id="cpf" class="input-1" />
+          <input type="text" name="cpf" id="cpf" class="input-1" required />
 
-          <input type="radio" name="male" id="male" class="radio" />
+          <input type="radio" name="male" id="male" class="radio" required />
           <label for="male">Masculino</label>
 
-          <input type="radio" name="female" id="female" class="radio" />
+          <input
+            type="radio"
+            name="female"
+            id="female"
+            class="radio"
+            required
+          />
           <label for="male">Feminino</label>
 
           <input type="submit" value="Enviar" />
@@ -79,10 +85,22 @@
         </p>
         <form action="#">
           <label for="friend">Nome do seu amigo:</label>
-          <input type="text" name="friend" id="friend-name" class="form-news" />
+          <input
+            type="text"
+            name="friend"
+            id="friend-name"
+            class="form-news"
+            required
+          />
 
           <label for="friend-mail">E-mail</label>
-          <input type="email" name="fMail" id="friend-mail" class="form-news" />
+          <input
+            type="email"
+            name="fMail"
+            id="friend-mail"
+            class="form-news"
+            required
+          />
           <br /><br /><br />
           <input type="submit" id="news-btn" value="Enviar agora" />
         </form>

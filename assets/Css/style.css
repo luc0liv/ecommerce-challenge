@@ -2,62 +2,81 @@
   --main-color: #707070;
   --secondary-color: #888888;
   --third-color: #00000029;
-  --basic: #FFFFFF;
+  --basic: #ffffff;
 }
-
-body {
-  margin: 0 auto;
-
+* {
+  box-sizing: border-box;
+  padding: 0;
 }
 header {
   background-color: var(--main-color);
   font-family: "Helvetica", sans-serif;
   height: 24.939rem;
   left: 0;
-  padding-top: 2px;
+  margin-bottom: 0.625rem;
+  padding-top: 0.125rem;
   text-align: center;
   top: 0;
-  margin-bottom: 0.625rem;
-
+  position: static;
 }
 
 .head-1 {
   color: var(--basic);
-  font-size: 20px;
+  font-size: 1.25rem;
+  width: auto;
 }
 
 .head-2 {
   color: var(--basic);
-  font-size: 40px;
+  font-size: 2.5rem;
+  width: auto;
 }
 
 .head-3 {
   color: var(--basic);
-  font-size: 14px;
+  font-size: 0.875rem;
+  width: auto;
+}
+.nav-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 48.0625rem;
+  margin: 0 auto;
+  margin-top: 3.125rem;
 }
 
+.nav-btns button {
+  background-color: var(--basic);
+  border: var(--main-color) solid 1px;
+  border-radius: 4px;
+  text-align: center;
+  color: var(--secondary-color);
+  width: 10rem;
+  height: 2.5rem;
+}
 nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 769px;
+  width: 48.0625rem;
   margin: 0 auto;
   margin-top: 3.125rem;
 }
 
 nav ul li {
   list-style: none;
-  padding: 5px 25px;
-  background-color: #fff;
-  border: #707070 solid 1px;
+  padding: 0.3125rem 1.5625rem;
+  background-color: var(--basic);
+  border: var(--main-color) solid 1px;
   border-radius: 4px;
+  text-align: center;
 }
 
 nav ul li a {
-  color: #707070;
-  font: 14px 'Helvetica', sans-serif;
+  color: var(--main-color);
+  font: 0.875rem "Helvetica", sans-serif;
   text-decoration: none;
-
 }
 
 .section-1 {
@@ -73,7 +92,6 @@ nav ul li a {
   align-content: center;
   width: auto;
   margin: 0 auto ;*/
-
 }
 
 .section-1 article {
@@ -81,12 +99,12 @@ nav ul li a {
   width: 32.5rem;
 }
 .section-1 h3 {
-  font: 20px "Helvetica", sans-serif;
+  font: 1.25rem "Helvetica", sans-serif;
   text-align: left;
 }
 
 .section-1 p {
-  font: 12px "Helvetica", sans-serif;
+  font: 0.75rem "Helvetica", sans-serif;
   text-align: left;
 }
 
@@ -96,107 +114,111 @@ nav ul li a {
 
 label {
   font-family: "Helvetica", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .input-1 {
-  height: 30px;
+  height: 1.875rem;
   width: 100%;
 }
 input {
-  margin: 10px;
+  margin: 0.625rem;
 }
 input[type="submit"] {
-  background: #ffffff 0% 0% no-repeat padding-box;
+  background: var(--basic) 0% 0% no-repeat padding-box;
   border-radius: 4px;
-  border: 1px solid #707070;
+  border: 1px solid var(--main-color);
+  color: var(--secondary-color);
   cursor: pointer;
-  height: 39px;
+  height: 2.4375rem;
+  margin-bottom: 79px;
   width: 100%;
 }
 
 .section-1 form label {
   color: var(--secondary-color);
   font-family: "Helvetica", sans-serif;
-  padding: 10px;
+  padding: 0.625rem;
 }
 .card-list {
-  align-items: center;
   color: var(--secondary-color);
   display: grid;
-  grid-gap: 30px;
+  grid-gap: 1.875rem;
   grid-template-columns: 12.5rem 12.5rem 12.5rem 12.5rem;
   justify-content: center;
-  width: 57.5rem;
   margin: 0 auto;
+  margin-top: 3.125rem;
+  width: 57.5rem;
 }
 
 .prod-img {
-  min-width: 200px;
+  min-width: 12.5rem;
 }
 .prod-name {
-  font: 14px "Helvetica", sans-serif;
+  font: 0.875rem "Helvetica", sans-serif;
 }
 
 .prod-desc {
-  font: 12px "Helvetica", sans-serif;
-  width: 200px;
+  font: 0.75rem "Helvetica", sans-serif;
+  width: 12.5rem;
 }
 
 .old-price {
-  font: 12px "Helvetica", sans-serif;
+  font: 0.75rem "Helvetica", sans-serif;
 }
 
 .price {
-  font: bold 16px "Helvetica", sans-serif;
+  font: bold 1rem "Helvetica", sans-serif;
 }
 
 .inst {
-  font: 12px "Helvetica", sans-serif;
+  font: 0.75rem "Helvetica", sans-serif;
 }
 
 .purchase-btn {
-  background: #ffffff 0% 0% no-repeat padding-box;
+  background: var(--basic) 0% 0% no-repeat padding-box;
   border-radius: 4px;
-  border: 1px solid #707070;
+  border: 1px solid var(--main-color);
+  color: var(--secondary-color);
   cursor: pointer;
-  height: 30px;
+  height: 1.875rem;
   width: 12.5rem;
 }
 
 .next-btn {
-  background: #ffffff 0% 0% no-repeat padding-box;
+  background: var(--basic) 0% 0% no-repeat padding-box;
   border-radius: 4px;
-  border: 1px solid #707070;
+  border: 1px solid var(--main-color);
+  color: var(--secondary-color);
   cursor: pointer;
   height: 2.438rem;
-  margin: 0 auto;
+  margin: 3.625rem 18.125rem 8rem 18.125rem;
   width: 16.25rem;
 }
 
 h2 {
-  color: #888888;
-  font: bold 18px "Helvetica", sans-serif;
-  margin-top: 10px;
+  color: var(--secondary-color);
+  font: bold 1.125rem "Helvetica", sans-serif;
+  margin-top: 0.625rem;
   position: relative;
   text-align: center;
   z-index: 1;
 }
 
 h2:before {
-  border-top: 1px solid #888888;
+  border-top: 1px solid var(--secondary-color);
   bottom: 0;
   content: "";
   left: 0;
   margin: 0 auto;
   position: absolute;
   right: 0;
-  top: 10px;
-  width: 920px;
+  top: 0.625rem;
+  width: 57.5rem;
   z-index: -1;
 }
 
 h2 span {
-  background: #fff;
+  background: var(--basic);
   padding: 0 15px;
 }
 
@@ -213,8 +235,8 @@ h2 span {
   font: 0.75rem "Helvetica", sans-serif;
 }
 .form-news {
-  background: #ffffff 0% 0% no-repeat padding-box;
-  border: 1px solid #707070;
+  background: var(--basic) 0% 0% no-repeat padding-box;
+  border: 1px solid var(--main-color);
   margin: 10px 10px;
   opacity: 1;
   width: 21.25rem;
@@ -224,6 +246,7 @@ h2 span {
   background: #ffffff 0% 0% no-repeat padding-box;
   border-radius: 4px;
   border: 1px solid #707070;
+  color: var(--secondary-color);
   cursor: pointer;
   height: 2.438rem;
   margin: 0 auto;
@@ -234,6 +257,7 @@ footer {
   background-color: #707070;
   left: 0px;
   top: 134.438rem;
+  margin-top: 4.485rem;
   width: 100%;
 }
 
@@ -246,12 +270,52 @@ footer p {
   text-align: center;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 760px){
 
-  nav ul {
+  .nav-btns {
     display: grid;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-column-gap: 1.25rem ;
+    grid-row-gap: 1.25rem;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    margin: 0 auto;
+    width: 21.563rem;
+  }
+
+  .section-1 {
+    display: block;
+  }
+
+  .card-list {
+    display: grid;
+    grid-template-columns: 24.125rem;
+    justify-content: start;
+    margin: 0.625rem;
+  }
+
+}
+@media only screen and (max-width: 420px) {
+  header {
+    text-align: left;
+    width: 100%;
+    height: auto;
+  }
+
+  .head-1 {
+    margin: 66px 10px 0px;
+  }
+  .head-2 {
+    margin: 0px 10px;
+  }
+  .head-3 {
+    margin: 10px 9px 56px;
+  }
+
+  .nav-btns {
+    display: grid;
+    grid-column-gap: 1.25rem ;
+    grid-row-gap: 1.25rem;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     justify-content: center;
@@ -260,11 +324,38 @@ footer p {
   }
 
   .card-list {
-    display: block;
+    display: grid;
+    grid-template-columns: 24.125rem;
+    justify-content: start;
+    margin: 0.625rem;
+  }
+
+  .prod-img {
+    min-width: 12.5rem;
+  }
+  .prod-name {
+    font: 0.875rem "Helvetica", sans-serif;
+  }
+
+  .prod-desc {
+    font: 0.75rem "Helvetica", sans-serif;
+    width: 24.125rem;
+  }
+
+  .old-price {
+    font: 0.75rem "Helvetica", sans-serif;
+  }
+
+  .price {
+    font: bold 1rem "Helvetica", sans-serif;
+  }
+
+  .inst {
+    font: 0.75rem "Helvetica", sans-serif;
   }
 
   .purchase-btn {
-    width: auto;
+    width: 100%;
   }
 
   .prod-card:nth-child(n + 5):nth-child(-n + 8) {
@@ -277,6 +368,7 @@ footer p {
 
   .section-1 article {
     width: 24.125rem;
+    margin: 10px;
   }
 
   .section-1 form {
@@ -296,49 +388,9 @@ footer p {
     z-index: -1;
   }
 
-  footer {
-    width: auto;
-  }
-}
-
-@media only screen and (max-width: 420px) {
-  .card-list {
-    display: block;
-  }
-
-  .purchase-btn {
-    width: auto;
-  }
-
-  .prod-card:nth-child(n + 5):nth-child(-n + 8) {
-    display: none;
-  }
-
-  .section-1 {
-    display: block;
-  }
-
-  .section-1 article {
+  .newsletter {
     width: 24.125rem;
   }
-
-  .section-1 form {
-    width: 24.125rem;
-  }
-
-  h2:before {
-    border-top: 1px solid #888888;
-    bottom: 0;
-    content: "";
-    left: 0;
-    margin: 0 auto;
-    position: absolute;
-    right: 0;
-    top: 10px;
-    width: auto;
-    z-index: -1;
-  }
-
   footer {
     width: auto;
   }

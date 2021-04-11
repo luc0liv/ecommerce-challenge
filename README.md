@@ -1,7 +1,7 @@
 # desafio-front-end
-Desafio para o processo seletivo da Linx.
-O desafio consiste no desenvolvimento do layout de uma landing page com uma grade de produtos e um formulário de newsletter. 
-O objetivo principal é transformar este layout em uma página funcional. 
+## Desafio para o processo seletivo da Linx. 
+#### O desafio consiste no desenvolvimento do layout de uma landing page com uma grade de produtos e um formulário de newsletter. 
+#### O objetivo principal é transformar este layout em uma página funcional. 
 
 ## Tecnologias utilizadas
 

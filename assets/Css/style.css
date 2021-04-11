@@ -4,17 +4,18 @@
   --third-color: #00000029;
   --basic: #ffffff;
 }
+
 body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
+/*START OF HEADER*/
 header {
-  background: -webkit-linear-gradient(
-    100deg,
-    rgb(255, 255, 255) 40%,
-    rgba(112, 112, 112, 1) 0%
-  );
+  background: -webkit-linear-gradient(100deg,
+      rgb(255, 255, 255) 40%,
+      rgba(112, 112, 112, 1) 0%);
   font-family: "Helvetica", sans-serif;
   height: 24.939rem;
   margin-bottom: 0.625rem;
@@ -40,6 +41,7 @@ header {
   font-size: 0.875rem;
   width: auto;
 }
+
 .nav-btns {
   display: flex;
   flex-direction: row;
@@ -58,7 +60,9 @@ header {
   width: 10rem;
   height: 2.5rem;
 }
+/*END OF HEADER*/
 
+/*START OF MAIN*/
 .section-1 {
   display: flex;
   justify-content: space-between;
@@ -71,6 +75,7 @@ header {
   margin-right: 60px;
   width: 60vw;
 }
+
 .section-1 h3 {
   font: 1.25rem "Helvetica", sans-serif;
   text-align: left;
@@ -90,6 +95,7 @@ label {
   font-size: 0.75rem;
   padding: 0.625rem;
 }
+
 .input-1 {
   height: 1.875rem;
   margin: 2%;
@@ -101,6 +107,7 @@ label {
   font-family: "Helvetica", sans-serif;
   padding: 0.625rem;
 }
+
 .submit-1 {
   align-content: center;
   background: var(--basic) 0% 0% no-repeat padding-box;
@@ -109,8 +116,9 @@ label {
   color: var(--secondary-color);
   cursor: pointer;
   height: 2.4375rem;
-  margin-top: 20px;
   margin-bottom: 79px;
+  margin-left: 10px;
+  margin-top: 20px;
   width: 100%;
 }
 
@@ -120,14 +128,15 @@ label {
   grid-gap: 1.875rem;
   grid-template-columns: auto auto auto auto;
   justify-content: center;
-  margin: 0 auto;
   margin-top: 3.125rem;
+  margin: 0 auto;
   width: auto;
 }
 
 .prod-img {
   min-width: 12.5rem;
 }
+
 .prod-name {
   font: 0.875rem "Helvetica", sans-serif;
 }
@@ -162,9 +171,10 @@ label {
 #more-products {
   display: flex;
   justify-content: center;
-  margin-top: 58px;
   margin-bottom: 128px;
+  margin-top: 58px;
 }
+
 .next-btn {
   background: var(--basic) 0% 0% no-repeat padding-box;
   border-radius: 4px;
@@ -206,12 +216,14 @@ h2 span {
   margin: 0 auto;
   text-align: center;
 }
+
 .newsletter p {
   color: var(--secondary-color);
   font: 0.875rem "Helvetica", sans-serif;
   margin-bottom: 2.438rem;
   margin-top: 2.75rem;
 }
+
 .form-news {
   background: var(--basic) 0% 0% no-repeat padding-box;
   border: 1px solid var(--main-color);
@@ -219,6 +231,7 @@ h2 span {
   opacity: 1;
   width: 21.25rem;
 }
+
 .newsletter label {
   color: var(--secondary-color);
   font: 0.75rem "Helvetica", sans-serif;
@@ -228,14 +241,16 @@ h2 span {
   align-content: center;
   background: #ffffff 0% 0% no-repeat padding-box;
   border-radius: 4px;
-  border: 1px solid #707070;
+  border: 1px solid var(--secondary-color);
   color: var(--secondary-color);
   cursor: pointer;
   height: 2.438rem;
   margin: 0 auto;
   width: 16.25rem;
 }
+/*END OF MAIN*/
 
+/*START OF FOOTER*/
 footer {
   background-color: var(--main-color);
   height: 293.24px;
@@ -253,7 +268,9 @@ footer p {
   top: 9.8275rem;
   text-align: center;
 }
+/*END OF FOOTER*/
 
+/*RESPONSIVENESS*/
 @media only screen and (max-width: 768px) {
   .nav-btns {
     display: grid;
@@ -272,7 +289,7 @@ footer p {
   }
 
   h2:before {
-    border-top: 1px solid #888888;
+    border-top: 1px solid var(--secondary-color);
     bottom: 0;
     content: "";
     left: 0;
@@ -303,20 +320,23 @@ footer p {
     margin-top: 3.125rem;
   }
 }
+
 @media only screen and (max-width: 420px) {
   header {
+    height: auto;
+    padding-bottom: 69px;
     text-align: left;
     width: 100vw;
-    padding-bottom: 69px;
-    height: auto;
   }
 
   .title-1 {
     margin: 66px 10px 0px;
   }
+
   .title-2 {
     margin: 0px 10px;
   }
+
   .title-3 {
     margin: 10px 9px 56px;
   }
@@ -342,6 +362,7 @@ footer p {
   .prod-img {
     min-width: 12.5rem;
   }
+
   .prod-name {
     font: 0.875rem "Helvetica", sans-serif;
   }
@@ -381,13 +402,14 @@ footer p {
     width: auto;
     margin: 2%;
   }
+
   .section-1 article {
     width: 100vw;
     margin: 2%;
   }
 
   h2:before {
-    border-top: 1px solid #888888;
+    border-top: 1px solid var(--secondary-color);
     bottom: 0;
     content: "";
     left: 0;
@@ -402,6 +424,7 @@ footer p {
   .newsletter {
     width: auto;
   }
+
   footer {
     width: 100vw;
   }
@@ -409,18 +432,20 @@ footer p {
 
 @media only screen and (max-width: 360px) {
   header {
+    height: auto;
+    padding-bottom: 69px;
     text-align: left;
     width: 100vw;
-    padding-bottom: 69px;
-    height: auto;
   }
 
   .title-1 {
     margin: 66px 10px 0px;
   }
+
   .title-2 {
     margin: 0px 10px;
   }
+
   .title-3 {
     margin: 10px 9px 56px;
   }
@@ -446,6 +471,7 @@ footer p {
   .prod-img {
     min-width: 12.5rem;
   }
+
   .prod-name {
     font: 0.875rem "Helvetica", sans-serif;
   }
@@ -485,13 +511,14 @@ footer p {
     width: auto;
     margin: 2%;
   }
+
   .section-1 article {
     width: 100vw;
     margin: 2%;
   }
 
   h2:before {
-    border-top: 1px solid #888888;
+    border-top: 1px solid var(--secondary-color);
     bottom: 0;
     content: "";
     left: 0;
@@ -506,9 +533,11 @@ footer p {
   .newsletter {
     width: 90vw;
   }
+
   .newsletter form input {
     width: 80vw;
   }
+
   footer {
     width: auto;
   }

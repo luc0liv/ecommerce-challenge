@@ -1,8 +1,6 @@
-let counter = 1;
+let nextApi = '';
 
 const productCards = (products) => {
-	const cardList = document.querySelector('#card-list');
-	cardList.innerHTML = '';
 	products.products.forEach((product) => {
 		//creates DOM elements
 		const cardList = document.querySelector('#card-list');
@@ -41,35 +39,32 @@ const productCards = (products) => {
 		sectionCard.appendChild(price);
 		sectionCard.appendChild(installments);
 		sectionCard.appendChild(purchaseButton);
-
-
 	})
-	const nextPageButton = document.createElement('button');
-
-	nextPageButton.classList.add('next-btn');
-	nextPageButton.innerText = 'Ainda mais produtos aqui!';
-
-	cardList.appendChild(nextPageButton);
-	const nextPage = `${products.nextPage}`;
-	nextPageButton.addEventListener('click', () => {
-		counter +=1;
-		getApi(`https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=${counter}`)
-	});
+	nextApi = `https://${products.nextPage}`; //reassigns the variable value to fetch the API's next page
 };
 
+// requesting the API
 const getApi = async (apiURL) => {
 	try {
 		const endPoint = await fetch(apiURL);
 		const promise = await endPoint.json();
-		const getProducts = promise;
-		productCards(getProducts);
+		productCards(promise);
 	} catch (error) {
 		return console.log(error);
 	}
 };
 
+const nextButtonGenerator = () => {
+	const moreProducts = document.querySelector('#more-products');
+	const nextPageButton = document.createElement('button');
+	nextPageButton.classList.add('next-btn');
+	nextPageButton.innerText = 'Ainda mais produtos aqui!';
+	moreProducts.appendChild(nextPageButton);
+	nextPageButton.addEventListener('click', () => { //'click' event that will direct to the API's next page
+		console.log(nextApi)
+		getApi(nextApi) // the parameter wich calls getApi is defined by nextApi
+	});
+}
 
-
-	getApi('https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1');
-
-
+nextButtonGenerator();
+getApi('https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1');

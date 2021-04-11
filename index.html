@@ -77,11 +77,11 @@
           Quer que seus amigos também ganhem a lista personalizada deles?
           Preencha agora!
         </p>
-        <form action="#">
+        <form action="#" onsubmit="return validate(this);">
           <label for="friend">Nome do seu amigo:</label>
-          <input type="text" name="friend" class="form-news" required />
+          <input type="text" name="name" id="name" class="form-news" />
           <label for="friend-mail">E-mail</label>
-          <input type="email" name="fMail" class="form-news" required />
+          <input type="email" name="email" id="email" class="form-news" />
           <br /><br /><br />
           <input type="submit" id="news-btn" value="Enviar agora" />
         </form>
@@ -96,5 +96,6 @@
     </footer>
 
     <script src="./assets/Scripts/index.js"></script>
+    <script src="./assets/Scripts/validation.js"></script>
   </body>
 </html>

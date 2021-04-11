@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/Css/style.css" type="text/css" />
+
     <title>Welcome!</title>
   </head>
   <body>
     <header>
-      <p class="head-1">uma seleção de produtos</p>
-      <h1 class="head-2">especial para você</h1>
-      <p class="head-3">
+      <p class="title-1">uma seleção de produtos</p>
+      <h1 class="title-2">especial para você</h1>
+      <p class="title-3">
         Todos os produtos desta lista foram selecionados a partir da sua
         navegação. Aproveite!
       </p>
@@ -60,20 +61,15 @@
           <input type="radio" name="male" id="male" class="radio" required />
           <label for="male">Masculino</label>
 
-          <input
-            type="radio"
-            name="female"
-            id="female"
-            class="radio"
-            required
-          />
+          <input type="radio" name="female" id="female" required />
           <label for="male">Feminino</label>
 
-          <input type="submit" value="Enviar" />
+          <input type="submit" value="Enviar" class="submit-1" />
         </form>
       </section>
       <h2><span>Sua seleção especial</span></h2>
       <section id="card-list" class="card-list"></section>
+      <div id="more-products"></div>
       <section class="newsletter">
         <h2><span>Compartilhe a novidade</span></h2>
 
@@ -83,22 +79,9 @@
         </p>
         <form action="#">
           <label for="friend">Nome do seu amigo:</label>
-          <input
-            type="text"
-            name="friend"
-            id="friend-name"
-            class="form-news"
-            required
-          />
-
+          <input type="text" name="friend" class="form-news" required />
           <label for="friend-mail">E-mail</label>
-          <input
-            type="email"
-            name="fMail"
-            id="friend-mail"
-            class="form-news"
-            required
-          />
+          <input type="email" name="fMail" class="form-news" required />
           <br /><br /><br />
           <input type="submit" id="news-btn" value="Enviar agora" />
         </form>

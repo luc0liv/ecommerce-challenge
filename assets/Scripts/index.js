@@ -26,7 +26,7 @@ const productCards = (products) => {
 		price.classList.add('price');
 		price.innerText = `Por: R$${product.price},99`;
 		installments.classList.add('inst');
-		installments.innerText = `ou ${product.installments.count}x de ${product.installments.value}`;
+		installments.innerText = `ou ${product.installments.count}x de R$${product.installments.value}`;
 		purchaseButton.classList.add('purchase-btn');
 		purchaseButton.innerText = 'Comprar';
 

@@ -15,8 +15,9 @@
 
 
 ## Deploy da aplicação com Netlify
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e4687dbd-7de8-4479-af71-9ee07b3626d5/deploy-status)](https://app.netlify.com/sites/front-end-challenge-lucoliv/deploys) <br>
 https://front-end-challenge-lucoliv.netlify.app
+
 
 ## Como rodar a aplicação
 
